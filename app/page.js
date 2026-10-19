@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Activites />
-      <footer id="contact" className="bg-dark text-white text-center py-4">
+      <footer id="contact" className="footer-pro text-center py-4">
         <p className="mb-0">© 2026 Les Petits Explorateurs</p>
       </footer>
     </>

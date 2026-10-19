@@ -11,20 +11,30 @@ export default function Activites() {
   }, []);
 
   return (
-    <section id="activites" className="bg-light py-5">
+    <section id="activites" className="py-5" style={{ background: "#f7fbfb" }}>
       <div className="container">
-        <h2 className="text-center fw-bold mb-5">Nos activités</h2>
-        <ul className="list-group shadow-sm">
+        <h2 className="text-center section-title display-6 mb-5">
+          Nos <span>activités</span>
+        </h2>
+        <div className="row g-4">
           {activites.map((a) => (
-            <li key={a.id} className="list-group-item d-flex justify-content-between align-items-center">
-              <span className="fw-semibold">{a.nom}</span>
-              <span>
-                <span className="badge bg-primary me-2">{a.horaire}</span>
-                <span className="badge bg-secondary">{a.age}</span>
-              </span>
-            </li>
+            <div className="col-12 col-md-6" key={a.id}>
+              <div className="card activity-card shadow-sm h-100">
+                <div className="card-body d-flex justify-content-between align-items-center">
+                  <div>
+                    <h5 className="fw-bold mb-1">{a.nom}</h5>
+                    <span className="text-secondary">
+                      <i className="bi bi-people-fill me-1"></i>{a.age}
+                    </span>
+                  </div>
+                  <span className="badge rounded-pill text-bg-warning fs-6 px-3 py-2">
+                    <i className="bi bi-clock me-1"></i>{a.horaire}
+                  </span>
+                </div>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );

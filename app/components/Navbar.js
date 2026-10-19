@@ -12,21 +12,24 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <nav className="navbar navbar-expand-lg navbar-glass shadow-sm sticky-top">
       <div className="container">
-        <a className="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary" href="#accueil">
+        <a className="navbar-brand d-flex align-items-center gap-2 fw-bold text-brand" href="#accueil">
           <span className="fs-3">🧸</span> {garderie ? garderie.nom : "Chargement..."}
         </a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+        <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
           data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menu">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="menu">
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav ms-auto align-items-lg-center gap-lg-2">
             <li className="nav-item"><a className="nav-link" href="#accueil">Accueil</a></li>
             <li className="nav-item"><a className="nav-link" href="#services">Services</a></li>
             <li className="nav-item"><a className="nav-link" href="#activites">Activités</a></li>
             <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
+            <li className="nav-item ms-lg-2 mt-2 mt-lg-0">
+              <a className="btn btn-brand py-2 px-4" href="#contact">Inscription</a>
+            </li>
           </ul>
         </div>
       </div>
