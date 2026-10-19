@@ -30,7 +30,7 @@ garderie-app/
 
 ## Installation
 ```bash
-git clone https://github.com/TON_USER/garderie-app.git
+git clone https://github.com/hyybaafarhat-bit/garderiee-app.git
 cd garderie-app
 npm install
 cd backend && npm install && cd ..
