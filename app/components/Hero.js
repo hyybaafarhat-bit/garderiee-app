@@ -21,15 +21,14 @@ export default function Hero() {
             <h1 className="display-4 fw-bold">{g.slogan}</h1>
             <p className="lead text-secondary my-4">{g.description}</p>
             <div className="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-              <a href="#contact" className="btn btn-brand btn-lg">Inscrire mon enfant</a>
-              <a href="#services" className="btn btn-outline-brand btn-lg">Nos services</a>
+              <a href="#services" className="btn btn-brand btn-lg">Découvrir nos services</a>
             </div>
             <p className="mt-4 mb-0 text-secondary">
               <i className="bi bi-clock-fill text-brand me-2"></i>{g.horaires}
             </p>
           </div>
           <div className="col-12 col-lg-6">
-            <img src={g.image} alt={g.nom} className="hero-img" />
+            <img src="/images/hero.jpg" alt={g.nom} className="hero-img" />
           </div>
         </div>
       </div>

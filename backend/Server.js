@@ -12,11 +12,11 @@ const garderie = {
   slogan: "Un endroit sûr où vos enfants grandissent en s'amusant",
   description:
     "Une équipe bienveillante, des activités éducatives et un environnement chaleureux pour accompagner chaque enfant dans son épanouissement.",
-  adresse: "12 Rue des Enfants, Sidi Bouzid",
+  adresse: "12 Rue des Enfants, Tozeur",
   telephone: "+216 00 000 000",
   email: "contact@petitsexplorateurs.tn",
   horaires: "Lundi - Vendredi : 7h30 - 18h00",
-  image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800",
+  image: "/images/hero.jpg",
 };
 
 const services = [

@@ -26,10 +26,6 @@ export default function Navbar() {
             <li className="nav-item"><a className="nav-link" href="#accueil">Accueil</a></li>
             <li className="nav-item"><a className="nav-link" href="#services">Services</a></li>
             <li className="nav-item"><a className="nav-link" href="#activites">Activités</a></li>
-            <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
-            <li className="nav-item ms-lg-2 mt-2 mt-lg-0">
-              <a className="btn btn-brand py-2 px-4" href="#contact">Inscription</a>
-            </li>
           </ul>
         </div>
       </div>
