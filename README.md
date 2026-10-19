@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧸 garderie-app
 
-## Getting Started
+Application web pour une garderie d'enfants : landing page responsive alimentée par une API REST.
 
-First, run the development server:
+## Technologies
+- Next.js (App Router) et React
+- Bootstrap 5
+- Node.js et Express
+- Git et GitHub (workflow par branches)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Structure des dossiers
+```
+garderie-app/
+├── app/
+│   ├── components/
+│   │   ├── Navbar.js
+│   │   ├── Hero.js
+│   │   ├── Services.js
+│   │   └── Activites.js
+│   ├── layout.js
+│   ├── page.js
+│   └── globals.css
+├── backend/
+│   ├── server.js
+│   └── package.json
+├── public/
+├── .env.local
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
+```bash
+git clone https://github.com/TON_USER/garderie-app.git
+cd garderie-app
+npm install
+cd backend && npm install && cd ..
+```
+Crée un fichier `.env.local` à la racine :
+```
+NEXT_PUBLIC_API_URL=http://localhost:5000
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Exécution
+Terminal 1 (backend) :
+```bash
+cd backend
+npm start      # http://localhost:5000
+```
+Terminal 2 (frontend) :
+```bash
+npm run dev    # http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Documentation des API
+| Méthode | Route | Description |
+|---|---|---|
+| GET | /api/garderie | Informations générales de la garderie |
+| GET | /api/services | Liste des services proposés |
+| GET | /api/activites | Liste des activités pour enfants |
 
-## Learn More
+### Exemple : GET /api/services
+```json
+[
+  { "id": 1, "icone": "🍼", "titre": "Garde à la journée", "description": "..." }
+]
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Exemple : GET /api/activites
+```json
+[
+  { "id": 1, "nom": "Chant et comptines", "horaire": "09h00", "age": "2-4 ans" }
+]
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Workflow Git
+Une branche par étape, fusionnée dans `main` : `feature/landing-page`, `feature/components`, `feature/backend`, `feature/api-integration`, `docs/readme`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Auteur
+Hyba farhat, ISET Tozeur
